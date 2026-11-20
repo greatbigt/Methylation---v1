@@ -41,7 +41,7 @@ gr <- makeGRangesFromDataFrame(
   end.field = "MAPINFO"         
 )
 
-# 2. Set up IDAT paths
+#  Set up IDAT paths
 # Replace with proper .IDAT files directory
 data_dir <- "file/path/idats"
 basenames <- list.files(data_dir, pattern = "_Red\\.idat$", recursive = TRUE, full.names = TRUE)
@@ -70,7 +70,7 @@ intragenic_indices <- unique(queryHits(overlap_hits))
 ann_regions <- annotate_regions(regions = gr, annotations = gene_features, ignore.strand = TRUE, quiet = TRUE)
 annotated_df <- data.frame(ann_regions)
 
-# 5. Get all gene ranges for distance calculation 
+#  Get all gene ranges for distance calculation 
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
 genes_gr <- genes(txdb)
 nearest_indices <- nearest(gr, genes_gr)
