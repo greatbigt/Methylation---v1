@@ -1,3 +1,8 @@
+# THIS CODE IS TO TRY AND ASSAY THE AGE OF A SET OF GIVEN SAMPLES BASED OFF OF A SERIES OF METHYLATION CLOCKS 
+
+# RUNNING EACH CLOCK IS RUN OFF OF https://github.com/isglobal-brge/methylclock 
+
+
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install("methylclock", version = "devel")
