@@ -13,10 +13,10 @@ library(sesameData)
 library(readxl)
 
 
-excel_path <- "/home/ashkarlab/Documents/Tristan/Methylation/data_manifest_HMM_SS_20102632_A1.sesame 2.xlsx"
+excel_path <- "annotation.xlsx"
 anno_df <- as.data.frame(read_excel(excel_path, sheet = 1))
 
-data_dir <- "/home/ashkarlab/Documents/Tristan/Methylation/idats"
+data_dir <- "/file/path/idats"
 basenames <- list.files(data_dir, pattern = "_Red\\.idat$", recursive = TRUE, full.names = TRUE)
 basenames <- sub("_Red\\.idat$", "", basenames)
 
